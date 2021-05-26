@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.terbac.ahuk.brick">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:fullBackupContent="@xml/my_backup_rules"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeMain">
+        <activity
+            android:name=".ui.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.Settings"
+            android:theme="@style/AppThemeOther"
+            android:label="@string/Settings">
+        </activity>
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:theme="@style/AppThemeOther"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/About">
+        </activity>
+    </application>
+</manifest>
